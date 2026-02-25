@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preview</title>
+<link href="https://www.cjc116.com/css/reset.css" rel="stylesheet">
+<style type="text/css">
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>溫柔接住每一次墜落——《即使你不在這裡》</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Google Fonts: Noto Serif TC (思源宋體) 增加文學感 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Noto Serif TC"', 'serif'],
+                    },
+                    colors: {
+                        'paper': '#fbfaf8',
+                        'ink': '#2c2c2c',
+                        'accent': '#b59a7f',
+                        'soft-gray': '#8e8e8e'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fbfaf8;
+            color: #2c2c2c;
+        }
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* 柔和的漸層背景，營造治癒氛圍 */
+        .hero-bg {
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(247,236,225,0.4) 0%, rgba(255,255,255,0) 70%);
+            z-index: 0;
+        }
+        .content-z {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="font-serif antialiased selection:bg-accent selection:text-white">
+
+    <!-- Hero Section / 首圖區域 -->
+    <header class="hero-bg min-h-[85vh] flex flex-col justify-center items-center px-6 py-20">
+        <div class="content-z max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16 lg:gap-24">
+            
+            <!-- 書封圖片 -->
+            <div class="fade-in-up w-48 md:w-64 lg:w-72 shrink-0">
+                <img src="https://cdn.kobo.com/book-images/04dcf628-d4a4-4d2c-bab0-a9578e59b207/180/1000/False/1LchqTRZSTq0tmaH8dfcMQ.jpg" 
+                     alt="即使你不在這裡 書封" 
+                     class="w-full h-auto rounded-md shadow-2xl shadow-ink/20 transform transition-transform hover:-translate-y-2 duration-500"
+                     onerror="this.src='https://via.placeholder.com/400x600?text=Book+Cover'">
+            </div>
+
+            <!-- 文字區塊 -->
+            <div class="space-y-8 text-center md:text-left flex-1">
+                <div class="fade-in-up delay-100">
+                    <span class="text-accent tracking-[0.2em] text-sm md:text-base font-medium uppercase">
+                        本屋大賞得主 町田苑香・極致治癒之作
+                    </span>
+                </div>
+                
+                <h1 class="fade-in-up delay-200 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-ink tracking-wide">
+                    溫柔接住<br class="md:hidden" />每一次墜落
+                </h1>
+                
+                <div class="fade-in-up delay-300 h-px w-24 bg-accent mx-auto md:mx-0"></div>
+                
+                <p class="fade-in-up delay-400 text-xl md:text-2xl text-soft-gray italic leading-relaxed font-light">
+                    「即使你不在這裡，可是，<br class="hidden lg:block"/>我的內心有著你來過的痕跡與回憶。」
+                </p>
+            </div>
+        </div>
+        
+        <!-- 向下滑動提示 -->
+        <div class="absolute bottom-10 animate-bounce text-accent fade-in-up delay-400">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </header>
+
+    <!-- 引言介紹 -->
+    <section class="max-w-4xl mx-auto px-6 py-24 text-center">
+        <p class="text-lg md:text-xl text-ink leading-loose font-light">
+            讀完《即使你不在這裡》，心底彷彿有陣微風輕輕吹過，拂去積壓的疲憊。<br class="hidden md:block" />
+            這部由五個短篇構成的作品圍繞著「離別」這個不可逆的課題。<br />
+            然而，作者的筆觸並未讓離別淪為令人窒息的深淵，<br class="hidden md:block" />
+            反而像一雙溫柔的手，穩穩接住了每個在生活中踉蹌跌倒的靈魂。
+        </p>
+    </section>
+
+    <!-- 核心亮點卡片區 -->
+    <section class="bg-white py-24 border-y border-gray-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-ink mb-16 tracking-wider">讀後亮點</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Card 1 -->
+                <div class="group p-8 border border-gray-100 hover:border-accent/30 hover:shadow-xl transition-all duration-300 bg-paper">
+                    <div class="text-accent mb-6">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-ink">擁抱日常的痛楚</h3>
+                    <p class="text-soft-gray leading-relaxed font-light text-sm md:text-base">
+                        書中的主角們帶著各自的殘缺與迷惘：因家庭而自卑、遭遇職場霸凌，或深陷見不得光的感情。這並非戲劇化的情節，而是真實人生中都可能踩進的泥淖。
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group p-8 border border-gray-100 hover:border-accent/30 hover:shadow-xl transition-all duration-300 bg-paper">
+                    <div class="text-accent mb-6">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-ink">與殘缺的自我和解</h3>
+                    <p class="text-soft-gray leading-relaxed font-light text-sm md:text-base">
+                        在〈守靈夜之夜〉中，我們看見了救贖：「妳的舉手投足和想法，都是他們的縮影。」原來那些急於掩飾的不堪碎片，早已成為別人愛我們的理由。
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group p-8 border border-gray-100 hover:border-accent/30 hover:shadow-xl transition-all duration-300 bg-paper">
+                    <div class="text-accent mb-6">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-ink">放手比緊握更勇敢</h3>
+                    <p class="text-soft-gray leading-relaxed font-light text-sm md:text-base">
+                        〈黑洞〉宛如警鐘，透過熬煮栗子澀皮煮，刻畫關係中的嫉妒與執念。提醒我們人生也需要「斷捨離」，幸福不必完美無缺，學會放手是另一種勇敢。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 女性長輩的智慧區塊 -->
+    <section class="max-w-4xl mx-auto px-6 py-24">
+        <div class="relative pl-8 md:pl-12 border-l-4 border-accent/40">
+            <h2 class="text-2xl font-bold text-ink mb-6">跨越世代的愛與力量</h2>
+            <p class="text-lg text-ink leading-loose font-light">
+                貫穿全書的另一重要元素，是那些充滿智慧的女性長輩。無論是溫柔守護家族的奶奶，還是敲打碗盤發洩的交響樂阿婆，她們都用歷經滄桑的經驗為年輕一代指引方向。<br><br>
+                她們留下的精神完美呼應了書名——即使她們已經不在這裡了，但那份愛與力量已深植主角與讀者體內，伴隨我們繼續前行。
+            </p>
+        </div>
+    </section>
+
+    <!-- 結尾行動呼籲 / 治癒句 -->
+    <footer class="bg-ink text-white py-24 text-center px-6">
+        <div class="max-w-3xl mx-auto">
+            <svg class="w-12 h-12 mx-auto text-accent mb-8 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 4v16m8-8H4"></path></svg>
+            
+            <p class="text-xl md:text-2xl font-light leading-relaxed mb-12 tracking-wide">
+                它不說教，不強迫你立刻振作，<br />
+                而是允許你悲傷，允許你帶著傷痕前進。
+            </p>
+            
+            <div class="inline-block border border-accent/50 bg-white/5 backdrop-blur-sm p-8 md:p-12">
+                <p class="text-2xl md:text-3xl font-bold text-accent tracking-widest leading-snug">
+                    「沒有關係的，你已經很努力了，<br class="hidden md:block"/>你會幸福的。」
+                </p>
+            </div>
+        </div>
+        
+        <div class="mt-20 text-xs text-soft-gray tracking-widest uppercase">
+            A Book Review Web Poster
+        </div>
+    </footer>
+
+    <script>
+        // 簡單的進入視窗時的淡入效果 (Scroll Animation)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach((section) => {
+            section.style.opacity = '0'; // 初始隱藏
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
+<script>
+// Error handling
+window.onerror = function(msg, url, line, col, error) {
+  console.error('Error:', msg, 'at line', line);
+  return false;
+};
+
+
+</script>
+</body>
+</html>
